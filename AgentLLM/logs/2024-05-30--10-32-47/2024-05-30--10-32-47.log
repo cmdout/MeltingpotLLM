@@ -1,0 +1,76 @@
+None - step_0 - INFO - __main__ - train_llm_agent:40 - Program started
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:97 - Laura is player 0
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:97 - Juan is player 1
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:97 - Pedro is player 2
+None - step_0 - INFO - chromadb.telemetry.product.posthog - __init__:20 - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: name. Memory: Laura
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:97 - Laura is player 0
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:97 - Juan is player 1
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:97 - Pedro is player 2
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: current_steps_sequence. Memory: <queue.Queue object at 0x71d5db990350>
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: valid_actions. Memory: ['grab apple (x,y)', 'attack player (player_name) at (x,y)', 'explore', 'clean dirt of river at (x,y)', 'go to river bank at (x,y)', 'go to apples field edge at (x,y)']
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: bio_str. Memory: 
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: previous_actions. Memory: You have not performed any actions yet.
+None - step_0 - INFO - chromadb.telemetry.product.posthog - __init__:20 - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: name. Memory: Juan
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:97 - Laura is player 0
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:97 - Juan is player 1
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:97 - Pedro is player 2
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: current_steps_sequence. Memory: <queue.Queue object at 0x71d5d6911dd0>
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: valid_actions. Memory: ['grab apple (x,y)', 'attack player (player_name) at (x,y)', 'explore', 'clean dirt of river at (x,y)', 'go to river bank at (x,y)', 'go to apples field edge at (x,y)']
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: bio_str. Memory: 
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: previous_actions. Memory: You have not performed any actions yet.
+None - step_0 - INFO - chromadb.telemetry.product.posthog - __init__:20 - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: name. Memory: Pedro
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:97 - Laura is player 0
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:97 - Juan is player 1
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:97 - Pedro is player 2
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: current_steps_sequence. Memory: <queue.Queue object at 0x71d5d6904a50>
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: valid_actions. Memory: ['grab apple (x,y)', 'attack player (player_name) at (x,y)', 'explore', 'clean dirt of river at (x,y)', 'go to river bank at (x,y)', 'go to apples field edge at (x,y)']
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: bio_str. Memory: 
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: previous_actions. Memory: You have not performed any actions yet.
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - describe_scene:117 - Avatar 0 is in position (8, 12)
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - describe_scene:117 - Avatar 1 is in position (14, 17)
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - describe_scene:117 - Avatar 2 is in position (9, 18)
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.observations_generator - get_all_observations_descriptions:104 -  Observations descriptions for all agents: {'Laura': ['Observed dirt on the river at position [3, 19]', 'Observed dirt on the river at position [4, 19]', 'Observed dirt on the river at position [5, 19]', 'Observed dirt on the river at position [3, 17]', 'Observed dirt on the river at position [4, 17]', 'Observed dirt on the river at position [5, 17]', 'Observed dirt on the river at position [6, 17]', 'Observed dirt on the river at position [3, 15]', 'Observed dirt on the river at position [4, 15]', 'Observed dirt on the river at position [5, 15]', 'Observed dirt on the river at position [3, 13]', 'Observed dirt on the river at position [4, 13]', 'Observed dirt on the river at position [5, 13]', 'Observed dirt on the river at position [3, 11]', 'Observed dirt on the river at position [4, 11]', 'Observed dirt on the river at position [5, 11]', 'Observed agent Pedro at position [9, 18].'], 'Juan': ['Observed agent Pedro at position [9, 18].'], 'Pedro': ['Observed dirt on the river at position [4, 26]', 'Observed dirt on the river at position [5, 26]', 'Observed dirt on the river at position [4, 25]', 'Observed dirt on the river at position [5, 25]', 'Observed dirt on the river at position [4, 24]', 'Observed dirt on the river at position [5, 24]', 'Observed dirt on the river at position [4, 22]', 'Observed dirt on the river at position [5, 22]', 'Observed dirt on the river at position [4, 19]', 'Observed dirt on the river at position [5, 19]', 'Observed dirt on the river at position [4, 17]', 'Observed dirt on the river at position [5, 17]', 'Observed dirt on the river at position [6, 17]', 'Observed agent Juan at position [14, 17].']} 
+
+2024-05-30 10:00:00 - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: game_time. Memory: 2024-05-30 10:00:00
+2024-05-30 10:00:00 - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: known_agents. Memory: {'Pedro'}
+None - step_0 - INFO - AgentLLM.agent.memory_structure.long_term_memory - add_memory:83 - Adding memory to long term memory, Metadata: {'type': 'perception', 'created_at': '2024-05-30 10:00:00', 'poignancy': 10, 'timestamp': 1717034400}. Memory: Now it's 2024-05-30 10:00:00 and the reward obtained by me is 0.0. I am at the position (8, 12) looking to the East.
+I can currently observe the following:
+Observed dirt on the river at position [5, 13]
+Observed dirt on the river at position [5, 11]
+Observed dirt on the river at position [4, 13]
+Observed dirt on the river at position [4, 11]
+Observed dirt on the river at position [5, 15]
+Observed dirt on the river at position [3, 13]
+Observed dirt on the river at position [3, 11]
+Observed dirt on the river at position [6, 17]
+Observed dirt on the river at position [4, 15]
+Observed agent Pedro at position [9, 18].
+2024-05-30 10:00:00 - step_0 - ERROR - __main__ - train_llm_agent:87 - Rounds executed: 0. Exception: Expected each embedding in the embeddings to be a list, got ['str']
+Traceback (most recent call last):
+  File "/home/ye/LLMRL/meltingpot/AgentLLM/train_llm.py", line 83, in train_llm_agent
+    train_loop(agents, args.substrate, args.persist_memories, env)
+  File "/home/ye/LLMRL/meltingpot/AgentLLM/train_llm.py", line 102, in train_loop
+    step_actions = agent.move(observations, scene_description, state_changes, game_time, agent_reward)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ye/LLMRL/meltingpot/AgentLLM/agent/agent.py", line 89, in move
+    react, filtered_observations, state_changes = self.perceive(observations, state_changes, game_time, agent_reward)
+                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ye/LLMRL/meltingpot/AgentLLM/agent/agent.py", line 135, in perceive
+    self.ltm.add_memory(memory, game_time, self.observations_poignancy, {'type': 'perception'})
+  File "/home/ye/LLMRL/meltingpot/AgentLLM/agent/memory_structure/long_term_memory.py", line 88, in add_memory
+    self.collection.add(documents=[memory], metadatas=[metadata], ids=[str(uuid.uuid4())])
+  File "/home/ye/anaconda3/envs/meltingpot/lib/python3.11/site-packages/chromadb/api/models/Collection.py", line 154, in add
+    embeddings = self._embed(input=documents)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ye/anaconda3/envs/meltingpot/lib/python3.11/site-packages/chromadb/api/models/Collection.py", line 633, in _embed
+    return self._embedding_function(input=input)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ye/anaconda3/envs/meltingpot/lib/python3.11/site-packages/chromadb/api/types.py", line 194, in __call__
+    return validate_embeddings(maybe_cast_one_to_many_embedding(result))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ye/anaconda3/envs/meltingpot/lib/python3.11/site-packages/chromadb/api/types.py", line 488, in validate_embeddings
+    raise ValueError(
+ValueError: Expected each embedding in the embeddings to be a list, got ['str']

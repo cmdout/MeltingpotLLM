@@ -1,0 +1,42 @@
+None - step_0 - INFO - __main__ - train_llm_agent:40 - Program started
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:97 - Laura is player 0
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:97 - Juan is player 1
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:97 - Pedro is player 2
+None - step_0 - INFO - chromadb.telemetry.product.posthog - __init__:20 - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: name. Memory: Laura
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:97 - Laura is player 0
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:97 - Juan is player 1
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:97 - Pedro is player 2
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: current_steps_sequence. Memory: <queue.Queue object at 0x7c9c139ce1d0>
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: valid_actions. Memory: ['grab apple (x,y)', 'attack player (player_name) at (x,y)', 'explore', 'clean dirt of river at (x,y)', 'go to river bank at (x,y)', 'go to apples field edge at (x,y)']
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: bio_str. Memory: 
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: previous_actions. Memory: You have not performed any actions yet.
+None - step_0 - INFO - chromadb.telemetry.product.posthog - __init__:20 - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: name. Memory: Juan
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:97 - Laura is player 0
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:97 - Juan is player 1
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:97 - Pedro is player 2
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: current_steps_sequence. Memory: <queue.Queue object at 0x7c9c139dc890>
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: valid_actions. Memory: ['grab apple (x,y)', 'attack player (player_name) at (x,y)', 'explore', 'clean dirt of river at (x,y)', 'go to river bank at (x,y)', 'go to apples field edge at (x,y)']
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: bio_str. Memory: 
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: previous_actions. Memory: You have not performed any actions yet.
+None - step_0 - INFO - chromadb.telemetry.product.posthog - __init__:20 - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: name. Memory: Pedro
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:97 - Laura is player 0
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:97 - Juan is player 1
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:97 - Pedro is player 2
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: current_steps_sequence. Memory: <queue.Queue object at 0x7c9c139f0210>
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: valid_actions. Memory: ['grab apple (x,y)', 'attack player (player_name) at (x,y)', 'explore', 'clean dirt of river at (x,y)', 'go to river bank at (x,y)', 'go to apples field edge at (x,y)']
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: bio_str. Memory: 
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: previous_actions. Memory: You have not performed any actions yet.
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - describe_scene:117 - Avatar 0 is in position (10, 26)
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - describe_scene:117 - Avatar 1 is in position (14, 3)
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - describe_scene:117 - Avatar 2 is in position (11, 23)
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.observations_generator - get_all_observations_descriptions:104 -  Observations descriptions for all agents: {'Laura': ['Observed agent Pedro at position [11, 23].'], 'Juan': [], 'Pedro': ['Observed dirt on the river at position [6, 17]']} 
+
+2024-05-30 10:00:00 - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: game_time. Memory: 2024-05-30 10:00:00
+2024-05-30 10:00:00 - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: known_agents. Memory: {'Pedro'}
+None - step_0 - INFO - AgentLLM.agent.memory_structure.long_term_memory - add_memory:83 - Adding memory to long term memory, Metadata: {'type': 'perception', 'created_at': '2024-05-30 10:00:00', 'poignancy': 10, 'timestamp': 1717034400}. Memory: Now it's 2024-05-30 10:00:00 and the reward obtained by me is 0.0. I am at the position (10, 26) looking to the South.
+I can currently observe the following:
+Observed agent Pedro at position [11, 23].
+2024-05-30 10:00:00 - step_0 - INFO - __main__ - train_llm_agent:85 - Program interrupted. 0 rounds executed.

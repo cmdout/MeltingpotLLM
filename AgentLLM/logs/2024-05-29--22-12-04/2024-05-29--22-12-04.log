@@ -1,0 +1,49 @@
+None - step_0 - INFO - __main__ - train_llm_agent:40 - Program started
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:97 - Laura is player 0
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:97 - Juan is player 1
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:97 - Pedro is player 2
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: name. Memory: Laura
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:97 - Laura is player 0
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:97 - Juan is player 1
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:97 - Pedro is player 2
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: current_steps_sequence. Memory: <queue.Queue object at 0x765d6cc3a110>
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: valid_actions. Memory: ['grab apple (x,y)', 'attack player (player_name) at (x,y)', 'explore', 'clean dirt of river at (x,y)', 'go to river bank at (x,y)', 'go to apples field edge at (x,y)']
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: bio_str. Memory: 
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: previous_actions. Memory: ('You have not performed any actions yet.', '')
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: name. Memory: Juan
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:97 - Laura is player 0
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:97 - Juan is player 1
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:97 - Pedro is player 2
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: current_steps_sequence. Memory: <queue.Queue object at 0x765d6cc38b10>
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: valid_actions. Memory: ['grab apple (x,y)', 'attack player (player_name) at (x,y)', 'explore', 'clean dirt of river at (x,y)', 'go to river bank at (x,y)', 'go to apples field edge at (x,y)']
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: bio_str. Memory: 
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: previous_actions. Memory: ('You have not performed any actions yet.', '')
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: name. Memory: Pedro
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:97 - Laura is player 0
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:97 - Juan is player 1
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:97 - Pedro is player 2
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: current_steps_sequence. Memory: <queue.Queue object at 0x765d6cc2c3d0>
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: valid_actions. Memory: ['grab apple (x,y)', 'attack player (player_name) at (x,y)', 'explore', 'clean dirt of river at (x,y)', 'go to river bank at (x,y)', 'go to apples field edge at (x,y)']
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: bio_str. Memory: 
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: previous_actions. Memory: ('You have not performed any actions yet.', '')
+2024-05-29 22:00:00 - step_0 - ERROR - __main__ - train_llm_agent:87 - Rounds executed: 0. Exception: list index out of range
+Traceback (most recent call last):
+  File "/home/ye/LLMRL/meltingpot/AgentLLM/train_llm.py", line 83, in train_llm_agent
+    train_loop(agents, args.substrate, args.persist_memories, env)
+  File "/home/ye/LLMRL/meltingpot/AgentLLM/train_llm.py", line 92, in train_loop
+    time_step = env.reset()
+                ^^^^^^^^^^^
+  File "/home/ye/LLMRL/meltingpot/AgentLLM/env/MeltingPotEnvLLM.py", line 59, in reset
+    self.generate_observations()
+  File "/home/ye/LLMRL/meltingpot/AgentLLM/env/MeltingPotEnvLLM.py", line 160, in generate_observations
+    description, curr_global_map = self.descriptor.describe_scene(self.timestep)
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ye/LLMRL/meltingpot/AgentLLM/env/scene_descriptor/scene_descriptor.py", line 111, in describe_scene
+    self.compute_partial_observations(map, self.last_map)
+  File "/home/ye/LLMRL/meltingpot/AgentLLM/env/scene_descriptor/scene_descriptor.py", line 147, in compute_partial_observations
+    observation, agents_in_observation = self.crop_observation(padded_map, avatar_id, avatar.avatar_view)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ye/LLMRL/meltingpot/AgentLLM/env/scene_descriptor/scene_descriptor.py", line 164, in crop_observation
+    avatar_pos = list(zip(avatar_pos[1], avatar_pos[0]))[0]
+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range

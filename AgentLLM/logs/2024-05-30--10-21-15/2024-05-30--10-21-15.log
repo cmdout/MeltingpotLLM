@@ -1,0 +1,37 @@
+None - step_0 - INFO - __main__ - train_llm_agent:40 - Program started
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:97 - Laura is player 0
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:97 - Juan is player 1
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:97 - Pedro is player 2
+None - step_0 - INFO - chromadb.telemetry.product.posthog - __init__:20 - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: name. Memory: Laura
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:97 - Laura is player 0
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:97 - Juan is player 1
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:97 - Pedro is player 2
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: current_steps_sequence. Memory: <queue.Queue object at 0x7dca5b7ea810>
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: valid_actions. Memory: ['grab apple (x,y)', 'attack player (player_name) at (x,y)', 'explore', 'clean dirt of river at (x,y)', 'go to river bank at (x,y)', 'go to apples field edge at (x,y)']
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: bio_str. Memory: 
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: previous_actions. Memory: You have not performed any actions yet.
+None - step_0 - INFO - chromadb.telemetry.product.posthog - __init__:20 - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: name. Memory: Juan
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:97 - Laura is player 0
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:97 - Juan is player 1
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:97 - Pedro is player 2
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: current_steps_sequence. Memory: <queue.Queue object at 0x7dca5b7f8c90>
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: valid_actions. Memory: ['grab apple (x,y)', 'attack player (player_name) at (x,y)', 'explore', 'clean dirt of river at (x,y)', 'go to river bank at (x,y)', 'go to apples field edge at (x,y)']
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: bio_str. Memory: 
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: previous_actions. Memory: You have not performed any actions yet.
+None - step_0 - INFO - chromadb.telemetry.product.posthog - __init__:20 - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: name. Memory: Pedro
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:97 - Laura is player 0
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:97 - Juan is player 1
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:97 - Pedro is player 2
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: current_steps_sequence. Memory: <queue.Queue object at 0x7dca5b5846d0>
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: valid_actions. Memory: ['grab apple (x,y)', 'attack player (player_name) at (x,y)', 'explore', 'clean dirt of river at (x,y)', 'go to river bank at (x,y)', 'go to apples field edge at (x,y)']
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: bio_str. Memory: 
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: previous_actions. Memory: You have not performed any actions yet.
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - describe_scene:117 - Avatar 0 is in position (8, 16)
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - describe_scene:117 - Avatar 1 is in position (14, 17)
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - describe_scene:117 - Avatar 2 is in position (8, 25)
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.observations_generator - get_all_observations_descriptions:104 -  Observations descriptions for all agents: {'Laura': ['Observed dirt on the river at position [3, 25]', 'Observed dirt on the river at position [4, 25]', 'Observed dirt on the river at position [5, 25]', 'Observed dirt on the river at position [3, 24]', 'Observed dirt on the river at position [4, 24]', 'Observed dirt on the river at position [5, 24]', 'Observed dirt on the river at position [3, 22]', 'Observed dirt on the river at position [4, 22]', 'Observed dirt on the river at position [5, 22]', 'Observed dirt on the river at position [3, 19]', 'Observed dirt on the river at position [4, 19]', 'Observed dirt on the river at position [5, 19]', 'Observed dirt on the river at position [3, 17]', 'Observed dirt on the river at position [4, 17]', 'Observed dirt on the river at position [5, 17]', 'Observed dirt on the river at position [6, 17]', 'Observed dirt on the river at position [3, 15]', 'Observed dirt on the river at position [4, 15]', 'Observed dirt on the river at position [5, 15]', 'Observed agent Pedro at position [8, 25].'], 'Juan': ['Observed dirt on the river at position [5, 13]', 'Observed dirt on the river at position [5, 15]', 'Observed dirt on the river at position [5, 17]', 'Observed dirt on the river at position [5, 19]', 'Observed dirt on the river at position [5, 22]', 'Observed dirt on the river at position [6, 17]', 'Observed agent Laura at position [8, 16].'], 'Pedro': []} 
+
+2024-05-30 10:00:00 - step_0 - INFO - __main__ - train_llm_agent:85 - Program interrupted. 0 rounds executed.
