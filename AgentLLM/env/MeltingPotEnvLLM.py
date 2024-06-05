@@ -5,6 +5,7 @@ import datetime
 import dm_env
 import dmlab2d
 import numpy as np
+import pygame
 from gymnasium import spaces
 
 from AgentLLM.env.scene_descriptor.observations_generator import ObservationsGenerator
@@ -50,8 +51,13 @@ class MeltingPotEnvLLM:
         self.descriptor = SceneDescriptor(env_config)
         self.observationsGenerator = ObservationsGenerator(env_module.ASCII_MAP, env_config['player_names'],
                                                            substrate_name)
+        self.screen_width: int = 800
+        self.screen_height: int = 600
+        self.substrate_name = substrate_name
         self.game_steps = 0  # Number of steps of the game
         self.player_prefixes = env_config['player_names']
+        self.game_display = None
+        self.clock = None
 
     def reset(self, *args, **kwargs):
         """See base class."""
@@ -101,7 +107,22 @@ class MeltingPotEnvLLM:
     """
         observation = self._env.observation()
         world_rgb = observation[0]['WORLD.RGB']
-
+        surface = pygame.surfarray.make_surface(world_rgb)
+        rect = surface.get_rect()
+        observation_shape = world_rgb.shape
+        observation_height = observation_shape[0]
+        observation_width = observation_shape[1]
+        scale = min(self.screen_height // observation_height,
+                    self.screen_width // observation_width)
+        if self.game_display is None:
+            self.game_display = pygame.display.set_mode(
+                (observation_width * scale, observation_height * scale))
+            clock = pygame.time.Clock()
+        surf = pygame.transform.scale(
+            surface, (rect[2] * scale, rect[3] * scale))
+        self.game_display.blit(surf, dest=(0, 0))
+        pygame.display.update()
+        self.clock.tick(30)
         # RGB mode is used for recording videos
         return world_rgb
 

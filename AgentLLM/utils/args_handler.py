@@ -46,7 +46,7 @@ def get_args():
     parser.add_argument(
         "--agents_bio_config",
         type=str,
-        default="no_bio",
+        default="all_coop",
         help="Path to the agents bio config folder, basic valid options are: no_bio, all_coop, 2_coop_1_selfish, all_selfish"
     )
 

@@ -100,6 +100,13 @@ def train_loop(agents, substrate_name, persist_memories, env):
             agent_reward = env.score[agent.name]
             game_time = env.get_time()
             step_actions = agent.move(observations, scene_description, state_changes, game_time, agent_reward)
+            while not step_actions.empty():
+                step_action = step_actions.get()
+                # Update the actions map for the agent
+                actions[agent.name] = generate_agent_actions_map(step_action, env.default_agent_actions_map())
+                logger.info('Agent %s action map: %s', agent.name, actions[agent.name])
+            env.step(actions)
+
 
 
 if __name__ == "__main__":
