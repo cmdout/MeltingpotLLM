@@ -16,7 +16,7 @@ def get_args():
     parser.add_argument(
         "--substrate",
         type=str,
-        default="clean_up",
+        default="commons_harvest_open",
         help="Name of the game to run, the name must match a folder in game_environment/substrates/python"
     )
 

@@ -1,0 +1,6 @@
+*.avi
+*.txt
+*.png
+*.bin
+*.sqlite3
+/logs

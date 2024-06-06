@@ -1,0 +1,114 @@
+None - step_0 - INFO - __main__ - train_llm_agent:40 - Program started
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Laura is player 0
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Juan is player 1
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Lily is player 2
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Tom is player 3
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Jack is player 4
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Emily is player 5
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Pedro is player 6
+None - step_0 - INFO - chromadb.telemetry.product.posthog - __init__:20 - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: name. Memory: Laura
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Laura is player 0
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Juan is player 1
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Lily is player 2
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Tom is player 3
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Jack is player 4
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Emily is player 5
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Pedro is player 6
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: current_steps_sequence. Memory: <queue.Queue object at 0x7cd3a794a4d0>
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: valid_actions. Memory: ['grab apple (x,y)', 'attack player (player_name) at (x,y)', 'explore', 'clean dirt of river at (x,y)', 'go to river bank at (x,y)', 'go to apples field edge at (x,y)']
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: bio_str. Memory: Laura's bio: Laura is a cooperative person.  
+Important: make all your decisions taking into account Laura's bio.
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: previous_actions. Memory: You have not performed any actions yet.
+None - step_0 - INFO - chromadb.telemetry.product.posthog - __init__:20 - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: name. Memory: Juan
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Laura is player 0
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Juan is player 1
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Lily is player 2
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Tom is player 3
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Jack is player 4
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Emily is player 5
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Pedro is player 6
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: current_steps_sequence. Memory: <queue.Queue object at 0x7cd3a7958610>
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: valid_actions. Memory: ['grab apple (x,y)', 'attack player (player_name) at (x,y)', 'explore', 'clean dirt of river at (x,y)', 'go to river bank at (x,y)', 'go to apples field edge at (x,y)']
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: bio_str. Memory: Juan's bio: Juan is a cooperative person. 
+Important: make all your decisions taking into account Juan's bio.
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: previous_actions. Memory: You have not performed any actions yet.
+None - step_0 - INFO - chromadb.telemetry.product.posthog - __init__:20 - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: name. Memory: Lily
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Laura is player 0
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Juan is player 1
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Lily is player 2
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Tom is player 3
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Jack is player 4
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Emily is player 5
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Pedro is player 6
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: current_steps_sequence. Memory: <queue.Queue object at 0x7cd3a7958b50>
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: valid_actions. Memory: ['grab apple (x,y)', 'attack player (player_name) at (x,y)', 'explore', 'clean dirt of river at (x,y)', 'go to river bank at (x,y)', 'go to apples field edge at (x,y)']
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: bio_str. Memory: Lily's bio: Juan is a cooperative person. 
+Important: make all your decisions taking into account Lily's bio.
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: previous_actions. Memory: You have not performed any actions yet.
+None - step_0 - INFO - chromadb.telemetry.product.posthog - __init__:20 - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: name. Memory: Tom
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Laura is player 0
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Juan is player 1
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Lily is player 2
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Tom is player 3
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Jack is player 4
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Emily is player 5
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Pedro is player 6
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: current_steps_sequence. Memory: <queue.Queue object at 0x7cd3a7969710>
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: valid_actions. Memory: ['grab apple (x,y)', 'attack player (player_name) at (x,y)', 'explore', 'clean dirt of river at (x,y)', 'go to river bank at (x,y)', 'go to apples field edge at (x,y)']
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: bio_str. Memory: Tom's bio: Juan is a cooperative person. 
+Important: make all your decisions taking into account Tom's bio.
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: previous_actions. Memory: You have not performed any actions yet.
+None - step_0 - INFO - chromadb.telemetry.product.posthog - __init__:20 - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: name. Memory: Jack
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Laura is player 0
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Juan is player 1
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Lily is player 2
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Tom is player 3
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Jack is player 4
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Emily is player 5
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Pedro is player 6
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: current_steps_sequence. Memory: <queue.Queue object at 0x7cd3a7979390>
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: valid_actions. Memory: ['grab apple (x,y)', 'attack player (player_name) at (x,y)', 'explore', 'clean dirt of river at (x,y)', 'go to river bank at (x,y)', 'go to apples field edge at (x,y)']
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: bio_str. Memory: Jack's bio: Juan is a cooperative person. 
+Important: make all your decisions taking into account Jack's bio.
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: previous_actions. Memory: You have not performed any actions yet.
+None - step_0 - INFO - chromadb.telemetry.product.posthog - __init__:20 - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: name. Memory: Emily
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Laura is player 0
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Juan is player 1
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Lily is player 2
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Tom is player 3
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Jack is player 4
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Emily is player 5
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Pedro is player 6
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: current_steps_sequence. Memory: <queue.Queue object at 0x7cd3a7984350>
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: valid_actions. Memory: ['grab apple (x,y)', 'attack player (player_name) at (x,y)', 'explore', 'clean dirt of river at (x,y)', 'go to river bank at (x,y)', 'go to apples field edge at (x,y)']
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: bio_str. Memory: Emily's bio: Juan is a cooperative person. 
+Important: make all your decisions taking into account Emily's bio.
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: previous_actions. Memory: You have not performed any actions yet.
+None - step_0 - INFO - chromadb.telemetry.product.posthog - __init__:20 - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: name. Memory: Pedro
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Laura is player 0
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Juan is player 1
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Lily is player 2
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Tom is player 3
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Jack is player 4
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Emily is player 5
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Pedro is player 6
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: current_steps_sequence. Memory: <queue.Queue object at 0x7cd3a7984890>
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: valid_actions. Memory: ['grab apple (x,y)', 'attack player (player_name) at (x,y)', 'explore', 'clean dirt of river at (x,y)', 'go to river bank at (x,y)', 'go to apples field edge at (x,y)']
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: bio_str. Memory: Pedro's bio: Pedro is a cooperative person. 
+Important: make all your decisions taking into account Pedro's bio.
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: previous_actions. Memory: You have not performed any actions yet.
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - describe_scene:113 - Avatar 0 is in position (9, 18)
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - describe_scene:113 - Avatar 1 is in position (12, 18)
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - describe_scene:113 - Avatar 2 is in position (9, 14)
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - describe_scene:113 - Avatar 3 is in position (8, 25)
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - describe_scene:113 - Avatar 4 is in position (14, 17)
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - describe_scene:113 - Avatar 5 is in position (11, 23)
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - describe_scene:113 - Avatar 6 is in position (12, 6)
+2024-06-05 18:00:00 - step_0 - INFO - __main__ - train_llm_agent:85 - Program interrupted. 0 rounds executed.

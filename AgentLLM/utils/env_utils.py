@@ -37,7 +37,7 @@ def condition_to_end_game(substrate_name: str, current_map: list[str]):
         # Checks if there's any apple "A" in the current map
         for row in current_map:
             if "A" in row:
-                return False
+                return True
 
     return True
 

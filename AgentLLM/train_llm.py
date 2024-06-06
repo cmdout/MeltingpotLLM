@@ -1,3 +1,5 @@
+import random
+
 from ml_collections import config_dict
 
 from AgentLLM.env.MeltingPotEnvLLM import MeltingPotEnvLLM
@@ -90,6 +92,7 @@ def train_llm_agent(args, logger):
 def train_loop(agents, substrate_name, persist_memories, env):
     rounds_count, steps_count, max_rounds = 0, 0, 100
     time_step = env.reset()
+    env.render()
     while rounds_count < max_rounds and condition_to_end_game(substrate_name, env.get_current_global_map()):
         actions = {player_name: env.default_agent_actions_map() for player_name in env.player_prefixes}
         for agent in agents:
@@ -105,8 +108,12 @@ def train_loop(agents, substrate_name, persist_memories, env):
                 # Update the actions map for the agent
                 actions[agent.name] = generate_agent_actions_map(step_action, env.default_agent_actions_map())
                 logger.info('Agent %s action map: %s', agent.name, actions[agent.name])
-            env.step(actions)
-
+                env.step(actions)
+                env.render()
+        # for name in actions:
+        #     actions[name]['move'] = random.randint(0, 4)
+            actions[agent.name] = env.default_agent_actions_map()
+        # env.render()
 
 
 if __name__ == "__main__":

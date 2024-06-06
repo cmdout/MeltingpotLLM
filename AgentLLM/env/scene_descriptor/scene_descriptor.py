@@ -8,8 +8,9 @@ from AgentLLM.utils.logging import CustomAdapter
 logger = logging.getLogger(__name__)
 logger = CustomAdapter(logger)
 
+
 class Avatar:
-    def __init__(self, name:str, avatar_config):
+    def __init__(self, name: str, avatar_config):
         """
         Avatar class to store information about the player in the game
 
@@ -33,7 +34,6 @@ class Avatar:
         self.just_died = False
         self.just_revived = False
 
-
     def set_agents_in_observation(self, agents):
         self.agents_in_observation = agents
 
@@ -44,7 +44,7 @@ class Avatar:
             self.just_revived = True
         # If the avatar just died, set the just_died attribute
         elif avatar_state == 0 and self.avatar_state == 1:
-            self. just_died = True
+            self.just_died = True
         else:
             self.just_died = False
             self.just_revived = False
@@ -74,7 +74,7 @@ class Avatar:
         self.reward = None
         self.partial_observation = None
         self.agents_in_observation = None
-    
+
     def __str__(self):
         return (f"Avatar(name={self.name}, view={self.avatar_view}, position={self.position}, "
                 f"orientation={self.orientation}, reward={self.reward}, "
@@ -83,19 +83,15 @@ class Avatar:
                 f"state={self.avatar_state})")
 
 
-        
-
-
 class SceneDescriptor:
 
     def __init__(self, substrate_config):
         self.substrate_config = substrate_config
         self.n_players = substrate_config.lab2d_settings.numPlayers
         self.avatars = self.get_avatars(substrate_config.player_names)
-        self.last_map = None # Map of the inmediately last step
+        self.last_map = None  # Map of the inmediately last step
         for avatar_id, avatar in self.avatars.items():
             logger.info(f"{avatar.name} is player {avatar_id}")
-        
 
     def get_avatars(self, names):
         avatars = {}
@@ -116,12 +112,13 @@ class SceneDescriptor:
         for avatar_id, avatar in self.avatars.items():
             logger.info(f"Avatar {avatar_id} is in position {avatar.position}")
             result[avatar.name] = {"observation": avatar.partial_observation,
-                                 "agents_in_observation": avatar.agents_in_observation,
-                                 "global_position": avatar.position,
-                                 "orientation": int(avatar.orientation),
-                                 "last_observation": avatar.last_partial_observation,
-                                 "effective_zap": avatar.name in [a.murder for a in self.avatars.values() if a.just_died],
-                                }
+                                   "agents_in_observation": avatar.agents_in_observation,
+                                   "global_position": avatar.position,
+                                   "orientation": int(avatar.orientation),
+                                   "last_observation": avatar.last_partial_observation,
+                                   "effective_zap": avatar.name in [a.murder for a in self.avatars.values() if
+                                                                    a.just_died],
+                                   }
         return result, map
 
     def parse_zaps(self, zaps):
@@ -185,7 +182,6 @@ class SceneDescriptor:
 
         return agents
 
-
     @staticmethod
     def pad_matrix_to_square(matrix, min_padding, padding_char="-"):
         num_rows, num_cols = matrix.shape
@@ -209,7 +205,7 @@ class SceneDescriptor:
             avatar.reset_observation_variables()
 
     def parse_timestep(self, timestep):
-        
+
         map = timestep.observation["GLOBAL.TEXT"].item().decode("utf-8")
         map = parse_string_to_matrix(map)
         # zaps = timestep.observation["WORLD.WHO_ZAPPED_WHO"]
@@ -227,4 +223,3 @@ class SceneDescriptor:
 
         # return map, zaps
         return map
-    

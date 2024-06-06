@@ -106,18 +106,19 @@ class MeltingPotEnvLLM:
         into a video.
     """
         observation = self._env.observation()
-        world_rgb = observation[0]['WORLD.RGB']
-        surface = pygame.surfarray.make_surface(world_rgb)
-        rect = surface.get_rect()
+        world_rgb = observation['WORLD.RGB']
         observation_shape = world_rgb.shape
         observation_height = observation_shape[0]
         observation_width = observation_shape[1]
         scale = min(self.screen_height // observation_height,
                     self.screen_width // observation_width)
+        world_rgb = np.transpose(world_rgb, (1, 0, 2))  # PyGame is column major!
+        surface = pygame.surfarray.make_surface(world_rgb)
+        rect = surface.get_rect()
         if self.game_display is None:
             self.game_display = pygame.display.set_mode(
                 (observation_width * scale, observation_height * scale))
-            clock = pygame.time.Clock()
+            self.clock = pygame.time.Clock()
         surf = pygame.transform.scale(
             surface, (rect[2] * scale, rect[3] * scale))
         self.game_display.blit(surf, dest=(0, 0))
