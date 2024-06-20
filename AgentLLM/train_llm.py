@@ -14,6 +14,7 @@ from datetime import datetime
 import logging
 import os
 import time
+import cv2
 import traceback
 
 from meltingpot.human_players.play_commons_harvest import change_avatars_appearance
@@ -93,6 +94,10 @@ def train_loop(agents, substrate_name, persist_memories, env):
     rounds_count, steps_count, max_rounds = 0, 0, 100
     time_step = env.reset()
     env.render()
+
+    frame_size = (env.render().shape[1], env.render().shape[0])
+    out = cv2.VideoWriter('gameplay.avi', cv2.VideoWriter_fourcc(*'DIVX'), 15, frame_size)
+
     while rounds_count < max_rounds and condition_to_end_game(substrate_name, env.get_current_global_map()):
         actions = {player_name: env.default_agent_actions_map() for player_name in env.player_prefixes}
         for agent in agents:
@@ -101,6 +106,8 @@ def train_loop(agents, substrate_name, persist_memories, env):
             scene_description = all_observations['scene_description']
             state_changes = all_observations['state_changes']
             agent_reward = env.score[agent.name]
+            # print("reward:", agent_reward)
+            # print("rounds_count:", rounds_count)
             game_time = env.get_time()
             step_actions = agent.move(observations, scene_description, state_changes, game_time, agent_reward)
             while not step_actions.empty():
@@ -109,11 +116,16 @@ def train_loop(agents, substrate_name, persist_memories, env):
                 actions[agent.name] = generate_agent_actions_map(step_action, env.default_agent_actions_map())
                 logger.info('Agent %s action map: %s', agent.name, actions[agent.name])
                 env.step(actions)
+                frame = env.render()
+                out.write(cv2.cvtColor(frame, cv2.COLOR_RGB2BGR))
                 env.render()
-        # for name in actions:
-        #     actions[name]['move'] = random.randint(0, 4)
+            # for name in actions:
+            #     actions[name]['move'] = random.randint(0, 4)
             actions[agent.name] = env.default_agent_actions_map()
+        # rounds_count += 1
         # env.render()
+    out.release()
+    cv2.destroyAllWindows()
 
 
 if __name__ == "__main__":
@@ -122,5 +134,8 @@ if __name__ == "__main__":
     start_time = time.time()
     train_llm_agent(args, logger)
 
+    current_directory = os.getcwd()
+    video_path = os.path.join(current_directory, 'gameplay.avi')
+    print(f"Video saved at: {video_path}")
     # If the experiment is "personalized", prepare a start_variables.txt file on config path
     # It will be copied from args.scene_path, file is called variables.txt
