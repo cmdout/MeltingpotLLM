@@ -1,7 +1,7 @@
 import random
 
 from ml_collections import config_dict
-from torch.utils.tensorboard import SummaryWriter
+
 from AgentLLM.env.MeltingPotEnvLLM import MeltingPotEnvLLM
 from meltingpot import substrate
 from meltingpot.configs.substrates import clean_up, commons_harvest__closed, commons_harvest__open, \
@@ -93,7 +93,6 @@ def train_loop(agents, substrate_name, persist_memories, env):
     rounds_count, steps_count, max_rounds = 0, 0, 100
     time_step = env.reset()
     env.render()
-    writer = SummaryWriter()
     while rounds_count < max_rounds and condition_to_end_game(substrate_name, env.get_current_global_map()):
         actions = {player_name: env.default_agent_actions_map() for player_name in env.player_prefixes}
         for agent in agents:
@@ -111,12 +110,9 @@ def train_loop(agents, substrate_name, persist_memories, env):
                 logger.info('Agent %s action map: %s', agent.name, actions[agent.name])
                 env.step(actions)
                 env.render()
-            # for name in actions:
-            #     actions[name]['move'] = random.randint(0, 4)
+        # for name in actions:
+        #     actions[name]['move'] = random.randint(0, 4)
             actions[agent.name] = env.default_agent_actions_map()
-        rounds_count = rounds_count + 1
-        for key, value in env.score.items():
-            writer.add_scalar("score/"+key, value, rounds_count)
         # env.render()
 
 
