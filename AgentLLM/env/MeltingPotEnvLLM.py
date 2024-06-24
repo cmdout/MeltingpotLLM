@@ -19,6 +19,11 @@ PLAYER_STR_FORMAT = 'player_{index}'
 ActionMap = Mapping[str, Callable[[], int]]
 
 
+def _split_key(key: str):
+    """Splits the key into player index and name."""
+    return tuple(key.split('.', maxsplit=1))
+
+
 class MeltingPotEnvLLM:
     """An adapter between the Melting Pot substrates and RLLib MultiAgentEnv."""
 
@@ -203,6 +208,7 @@ class MeltingPotEnvLLM:
     def get_current_step_number(self) -> int:
         """Returns the current step number of the game."""
         return self.game_steps
+
 
 
 class ActionReader(object):
