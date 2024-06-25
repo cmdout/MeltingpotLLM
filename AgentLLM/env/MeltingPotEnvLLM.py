@@ -132,6 +132,7 @@ class MeltingPotEnvLLM:
         # RGB mode is used for recording videos
         return world_rgb
 
+
     def _convert_spaces_tuple_to_dict(
             self,
             input_tuple: spaces.Tuple,

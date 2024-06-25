@@ -4,6 +4,8 @@ import os
 from queue import Queue
 from typing import Union, Literal, Mapping, Callable
 
+import numpy as np
+
 from AgentLLM.agent.cognitive_modules.act import actions_sequence
 from AgentLLM.agent.cognitive_modules.perceive import create_memory, update_known_agents, update_known_objects, \
     should_react
@@ -74,8 +76,12 @@ class Agent:
         self.action_map = ActionMap
         self.descriptor = SceneDescriptor(env_config)
         self.observationsGenerator = ObservationsGenerator(env_module.ASCII_MAP, env_config['player_names'], substrate_name)
-
-
+        self.world_history = []
+        self.obs_history = []
+        self.action_history = []
+        self.orientation_history = []
+        self.position_history = []
+        self.reward_history = []
         # Initialize steps sequence in empty queue
         self.stm.add_memory(memory=Queue(), key='current_steps_sequence')
         self.stm.add_memory(memory=scenario_info['valid_actions'], key='valid_actions')
@@ -354,6 +360,16 @@ class Agent:
         current_reward = self.stm.get_memory('current_reward')
         update_understanding_4(observations, self, self.stm.get_memory('game_time'), last_reward, current_reward,
                                state_changes, understanding_umbral=self.understanding_umbral)
+
+    def store_state(self, id, time_step):
+        self.world_history.append(time_step.observation['WORLD.RGB'])
+        self.obs_history.append(time_step.observation[f"{id + 1}.RGB"])
+        self.orientation_history.append(time_step.observation[f"{id + 1}.ORIENTATION"])
+        self.position_history.append(time_step.observation[f"{id + 1}.POSITION"])
+
+    def store_actions(self, id, actions, time_step):
+        self.action_history.append(actions[self.name])
+        self.reward_history.append(time_step.observation[f"{id + 1}.REWARD"])
 
 
 

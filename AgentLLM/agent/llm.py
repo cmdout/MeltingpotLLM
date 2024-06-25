@@ -285,7 +285,7 @@ class GLM4(BaseLLM):
 
         self.logger.info("Loading GLM-4 model from the OPENAI API...")
         # Load the model
-        self.client = OpenAI(api_key="9c7c1ccc16255db2cfda0aa351de9989.A1nLcAimMHTEhrMK", base_url="https://open.bigmodel.cn/api/paas/v4/")
+        self.client = OpenAI(api_key="858a62de319af0bb6a1889750c576ccc.cGMjFRmyUQpaHlVc", base_url="https://open.bigmodel.cn/api/paas/v4/")
         self.deployment_name = "glm-4"
         self.logger.info("Deployment name: " + self.deployment_name)
         # Encoding to estimate the number of tokens

@@ -1,7 +1,8 @@
+import pickle
 import random
 
+import numpy as np
 from ml_collections import config_dict
-
 from AgentLLM.env.MeltingPotEnvLLM import MeltingPotEnvLLM
 from meltingpot import substrate
 from meltingpot.configs.substrates import clean_up, commons_harvest__closed, commons_harvest__open, \
@@ -14,6 +15,7 @@ from datetime import datetime
 import logging
 import os
 import time
+import cv2
 import traceback
 
 from meltingpot.human_players.play_commons_harvest import change_avatars_appearance
@@ -39,6 +41,8 @@ environment_configs = {
 
 def train_llm_agent(args, logger):
     scene_path = None
+    exp_data_path = "data/experiment_data/" + args.substrate + '/' + logger_timestamp
+    os.makedirs(exp_data_path, exist_ok=True)
     logger.info("Program started")
     if args.start_from_scene:
         scene_path = f"data/scenes/{args.start_from_scene}"
@@ -79,6 +83,8 @@ def train_llm_agent(args, logger):
                     prompts_folder=str(args.prompts_source), substrate_name=args.substrate, start_from_scene=scene_path,
                     env_config=env_config, env_module=env_module)
               for player, player_context in zip(players, players_context)]
+    for player in players:
+        os.makedirs(exp_data_path + '/' + player, exist_ok=True)
     logger = CustomAdapter(logger, game_env=env)
     # We are setting args.prompts_source as a global variable to be used in the LLMModels class
     try:
@@ -87,15 +93,21 @@ def train_llm_agent(args, logger):
         logger.info("Program interrupted. %s rounds executed.", rounds_count)
     except Exception as e:
         logger.exception("Rounds executed: %s. Exception: %s", rounds_count, e)
+    store_exp_data(exp_data_path, agents)
 
 
 def train_loop(agents, substrate_name, persist_memories, env):
-    rounds_count, steps_count, max_rounds = 0, 0, 100
+    rounds_count, steps_count, max_rounds = 0, 0, 1
     time_step = env.reset()
     env.render()
+
+    frame_size = (env.render().shape[1], env.render().shape[0])
+    out = cv2.VideoWriter(logger_timestamp + '_gameplay.avi', cv2.VideoWriter_fourcc(*'DIVX'), 15, frame_size)
+
     while rounds_count < max_rounds and condition_to_end_game(substrate_name, env.get_current_global_map()):
         actions = {player_name: env.default_agent_actions_map() for player_name in env.player_prefixes}
-        for agent in agents:
+        for id, agent in enumerate(agents):
+            agent.store_state(id, time_step)
             all_observations = env.get_observations_by_player(agent.name)
             observations = all_observations['curr_state']
             scene_description = all_observations['scene_description']
@@ -108,12 +120,31 @@ def train_loop(agents, substrate_name, persist_memories, env):
                 # Update the actions map for the agent
                 actions[agent.name] = generate_agent_actions_map(step_action, env.default_agent_actions_map())
                 logger.info('Agent %s action map: %s', agent.name, actions[agent.name])
-                env.step(actions)
-                env.render()
-        # for name in actions:
-        #     actions[name]['move'] = random.randint(0, 4)
+                time_step = env.step(actions)
+                agent.store_actions(id, actions, time_step)
+                if not step_actions.empty():
+                    agent.store_state(id, time_step)
+                frame = env.render()
+                out.write(cv2.cvtColor(frame, cv2.COLOR_RGB2BGR))
             actions[agent.name] = env.default_agent_actions_map()
-        # env.render()
+            memories = {agent.name: agent.stm.get_memories().copy() for agent in agents}
+            persist_short_term_memories(memories, rounds_count, steps_count, logger_timestamp)
+        rounds_count += 1
+
+    out.release()
+    cv2.destroyAllWindows()
+
+
+def store_exp_data(data_folder, agents):
+    for agent in agents:
+        data_folder_ = data_folder + '/' + agent.name
+        np.save(data_folder_ + '/world_history.npy', np.array(agent.world_history))
+        np.save(data_folder_ + '/obs_history.npy', np.array(agent.obs_history))
+        np.save(data_folder_ + '/orientation_history', np.array(agent.orientation_history))
+        np.save(data_folder_ + '/position_history', np.array(agent.position_history))
+        np.save(data_folder_ + '/reward_history.npy', np.array(agent.reward_history))
+        with open(data_folder_ + '/action_history.pkl', 'wb') as f:
+            pickle.dump(agent.action_history, f)
 
 
 if __name__ == "__main__":
@@ -122,5 +153,8 @@ if __name__ == "__main__":
     start_time = time.time()
     train_llm_agent(args, logger)
 
+    current_directory = os.getcwd()
+    video_path = os.path.join(current_directory, 'gameplay.avi')
+    print(f"Video saved at: {video_path}")
     # If the experiment is "personalized", prepare a start_variables.txt file on config path
     # It will be copied from args.scene_path, file is called variables.txt
