@@ -3,6 +3,7 @@ import random
 
 import numpy as np
 from ml_collections import config_dict
+
 from AgentLLM.env.MeltingPotEnvLLM import MeltingPotEnvLLM
 from meltingpot import substrate
 from meltingpot.configs.substrates import clean_up, commons_harvest__closed, commons_harvest__open, \
@@ -97,7 +98,7 @@ def train_llm_agent(args, logger):
 
 
 def train_loop(agents, substrate_name, persist_memories, env):
-    rounds_count, steps_count, max_rounds = 0, 0, 1
+    rounds_count, steps_count, max_rounds = 0, 0, 100
     time_step = env.reset()
     env.render()
 
@@ -127,10 +128,9 @@ def train_loop(agents, substrate_name, persist_memories, env):
                 frame = env.render()
                 out.write(cv2.cvtColor(frame, cv2.COLOR_RGB2BGR))
             actions[agent.name] = env.default_agent_actions_map()
-            memories = {agent.name: agent.stm.get_memories().copy() for agent in agents}
-            persist_short_term_memories(memories, rounds_count, steps_count, logger_timestamp)
+            # memories = {agent.name: agent.stm.get_memories().copy() for agent in agents}
+            # persist_short_term_memories(memories, rounds_count, steps_count, logger_timestamp)
         rounds_count += 1
-
     out.release()
     cv2.destroyAllWindows()
 
@@ -153,8 +153,8 @@ if __name__ == "__main__":
     start_time = time.time()
     train_llm_agent(args, logger)
 
-    current_directory = os.getcwd()
-    video_path = os.path.join(current_directory, 'gameplay.avi')
-    print(f"Video saved at: {video_path}")
+    # current_directory = os.getcwd()
+    # video_path = os.path.join(current_directory, 'gameplay.avi')
+    # print(f"Video saved at: {video_path}")
     # If the experiment is "personalized", prepare a start_variables.txt file on config path
     # It will be copied from args.scene_path, file is called variables.txt

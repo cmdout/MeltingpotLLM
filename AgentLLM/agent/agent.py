@@ -4,8 +4,6 @@ import os
 from queue import Queue
 from typing import Union, Literal, Mapping, Callable
 
-import numpy as np
-
 from AgentLLM.agent.cognitive_modules.act import actions_sequence
 from AgentLLM.agent.cognitive_modules.perceive import create_memory, update_known_agents, update_known_objects, \
     should_react
@@ -370,7 +368,6 @@ class Agent:
     def store_actions(self, id, actions, time_step):
         self.action_history.append(actions[self.name])
         self.reward_history.append(time_step.observation[f"{id + 1}.REWARD"])
-
 
 
 

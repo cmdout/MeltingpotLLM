@@ -16,7 +16,7 @@ def get_defined_valid_actions(game_name: str = 'commons_harvest_open'):
 
     elif game_name == 'clean_up':
         return ['grab apple (x,y)',
-                # 'attack player (player_name) at (x,y)',
+                'attack player (player_name) at (x,y)',
                 'explore',
                 'clean dirt of river at (x,y)',
                 'go to river bank at (x,y)',

@@ -3,5 +3,6 @@
 *.png
 *.bin
 *.sqlite3
+*.npy
 /logs
 /.idea
