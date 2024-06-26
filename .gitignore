@@ -4,5 +4,6 @@
 *.bin
 *.sqlite3
 *.npy
+*.pkl
 /logs
 /.idea
