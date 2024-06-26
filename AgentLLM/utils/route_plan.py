@@ -1,7 +1,7 @@
 from collections import deque
 
 
-def get_shortest_valid_route(matrix: list[list[str]], start: tuple[int, int], end: tuple[int, int],
+def get_shortest_valid_route(matrix, start: tuple[int, int], end: tuple[int, int],
                              invalid_symbols: list[str] = ['W', '$'], orientation: int = 0):
     """Gets the shortest valid route between two points in a matrix.
 
@@ -24,8 +24,8 @@ def get_shortest_valid_route(matrix: list[list[str]], start: tuple[int, int], en
     directions = directions[orientation:] + directions[:orientation]
 
     def bfs(start, end):
-        visited = [[False for _ in range(len(matrix[0]))] for _ in range(len(matrix))]
-        prev = [[None for _ in range(len(matrix[0]))] for _ in range(len(matrix))]
+        visited = [[False for _ in range(matrix.shape[1])] for _ in range(matrix.shape[0])]
+        prev = [[None for _ in range(matrix.shape[1])] for _ in range(matrix.shape[0])]
 
         queue = deque([start])
         visited[start[0]][start[1]] = True
@@ -36,7 +36,7 @@ def get_shortest_valid_route(matrix: list[list[str]], start: tuple[int, int], en
             for d in range(4):
                 nx, ny = x + dx[d], y + dy[d]
 
-                if 0 <= nx < len(matrix) and 0 <= ny < len(matrix[0]) and not visited[nx][ny]:
+                if 0 <= nx < matrix.shape[0] and 0 <= ny < matrix.shape[1] and not visited[nx][ny]:
                     if matrix[nx][ny] not in invalid_symbols:
                         queue.append((nx, ny))
                         visited[nx][ny] = True

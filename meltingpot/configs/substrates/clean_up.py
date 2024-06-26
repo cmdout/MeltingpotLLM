@@ -397,7 +397,7 @@ POTENTIAL_APPLE = {
         {
             "component": "AppleGrow",
             "kwargs": {
-                "maxAppleGrowthRate": 0.05,
+                "maxAppleGrowthRate": 0.1,
                 "thresholdDepletion": 0.4,
                 "thresholdRestoration": 0.0,
             }
@@ -601,7 +601,7 @@ def create_scene():
             {
                 "component": "DirtSpawner",
                 "kwargs": {
-                    "dirtSpawnProbability": 0.5,
+                    "dirtSpawnProbability": 0.05,
                     "delayStartOfDirtSpawning": 50,
                 },
             },

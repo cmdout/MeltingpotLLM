@@ -1,11 +1,12 @@
 import logging
 from queue import Queue
 import random
-from utils.route_plan import get_shortest_valid_route
 import re
-from utils.queue_utils import queue_from_list, new_empty_queue
-from utils.math import manhattan_distance
-from utils.logging import CustomAdapter
+
+from AgentLLM.utils.logging import CustomAdapter
+from AgentLLM.utils.math import manhattan_distance
+from AgentLLM.utils.queue_utils import queue_from_list, new_empty_queue
+from AgentLLM.utils.route_plan import get_shortest_valid_route
 
 
 class SpatialMemory:
@@ -21,6 +22,7 @@ class SpatialMemory:
             scenario_map (str): Real map of the environment, in ascci format, rows separated by '\n'. 
             scenario_obstacles (list[str], optional): Obstacles of the scenario. Defaults to ['W'] for Walls.
         """
+        self.curr_global_map = None
         self.logger = logging.getLogger(__name__)
         self.logger = CustomAdapter(self.logger)
         self.scenario_map = scenario_map.split('\n')[1:-1]
@@ -31,7 +33,7 @@ class SpatialMemory:
         self.scenario_obstacles = scenario_obstacles
         self.explored_map = ["?" * self.mapSize[1] for _ in range(self.mapSize[0])]
 
-    def update_current_scene(self, new_position: tuple, orientation: int, current_observed_map: str) -> None:
+    def update_current_scene(self, new_position: tuple, orientation: int, current_observed_map: str, curr_global_map) -> None:
         """
         Updates the spatial information of the agent.
 
@@ -45,7 +47,7 @@ class SpatialMemory:
         self.position = new_position
         self.orientation = orientation
         self.current_observed_map = current_observed_map
-
+        self.curr_global_map = curr_global_map
         # By using the current observed map, we can update the explored map
         self.update_explored_map()
 
@@ -101,7 +103,7 @@ class SpatialMemory:
         # If the position is the same as the current one, return an empty queue
         if self.position == position_end:
             return queue_from_list(['stay put'])
-        route = get_shortest_valid_route(self.scenario_map, self.position, position_end,
+        route = get_shortest_valid_route(self.curr_global_map, self.position, position_end,
                                          invalid_symbols=self.scenario_obstacles, orientation=orientation)
 
         if not include_last_pos and len(route) > 0:

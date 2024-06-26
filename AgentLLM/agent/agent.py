@@ -92,10 +92,11 @@ class Agent:
             self.ltm.load_memories_from_scene(scene_path=start_from_scene, agent_name=name)
             self.stm.load_memories_from_scene(scene_path=start_from_scene, agent_name=name)
 
-    def move(self, observations, scene_description, state_changes, game_time, agent_reward):
+    def move(self, observations, scene_description, state_changes, game_time, agent_reward, curr_global_map):
         self.spatial_memory.update_current_scene(scene_description['global_position'],
                                                  scene_description['orientation'],
-                                                 scene_description['observation'])
+                                                 scene_description['observation'],
+                                                 curr_global_map)
         react, filtered_observations, state_changes = self.perceive(observations, state_changes, game_time, agent_reward)
 
         self.understand(filtered_observations, state_changes)

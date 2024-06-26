@@ -60,7 +60,7 @@ def train_llm_agent(args, logger):
 
     world_context_path = os.path.join(experiment_path, "world_context", f'{args.world_context}.txt')
     valid_actions = get_defined_valid_actions(game_name=args.substrate)
-    scenario_obstacles = ['W', '$']  # TODO : Change this. This should be also loaded from the scenario file
+    scenario_obstacles = ['W', '$', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0']  # TODO : Change this. This should be also loaded from the scenario file
     env_module = environment_configs[args.substrate]
     scenario_info = {'scenario_map': env_module.ASCII_MAP, 'valid_actions': valid_actions,
                      'scenario_obstacles': scenario_obstacles}  ## TODO: ALL THIS HAVE TO BE LOADED USING SUBSTRATE NAME
@@ -98,7 +98,7 @@ def train_llm_agent(args, logger):
 
 
 def train_loop(agents, substrate_name, persist_memories, env):
-    rounds_count, steps_count, max_rounds = 0, 0, 100
+    rounds_count, steps_count, max_rounds = 0, 0, 30
     time_step = env.reset()
     env.render()
 
@@ -115,7 +115,7 @@ def train_loop(agents, substrate_name, persist_memories, env):
             state_changes = all_observations['state_changes']
             agent_reward = env.score[agent.name]
             game_time = env.get_time()
-            step_actions = agent.move(observations, scene_description, state_changes, game_time, agent_reward)
+            step_actions = agent.move(observations, scene_description, state_changes, game_time, agent_reward, env.curr_global_map)
             while not step_actions.empty():
                 step_action = step_actions.get()
                 # Update the actions map for the agent
