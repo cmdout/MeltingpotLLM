@@ -207,8 +207,9 @@ class LLMModels():
             self.instance = super(LLMModels, self).__new__(self)
             self.instance.llm_models: dict[str, BaseLLM] = {
                 "glm-4": GLM4(),
+                "llama8b": Llama8b(),
             }
-            self.instance.main_model = "glm-4"
+            self.instance.main_model = "llama8b"
         return self.instance
 
     def get_main_model(self) -> BaseLLM:
@@ -292,6 +293,86 @@ class GLM4(BaseLLM):
         self.encoding = tiktoken.encoding_for_model("gpt-4-turbo-preview")
 
         self.logger.info("GLM-4 model loaded")
+
+    def _format_prompt(self, prompt: str, role: str = 'user') -> list[dict[str, str]]:
+        """Format the prompt to be used by the GPT-4 model
+        Args:
+            prompt (str): Prompt
+        Returns:
+            list: List of dictionaries containing the prompt and the role of the speaker
+        """
+        return [
+            {"content": prompt, "role": role}
+        ]
+
+    def __completion(self, prompt: str, **kwargs) -> tuple[str, int, int]:
+        """Completion api for the GPT-4 model
+        Args:
+            prompt (str): Prompt for the completion
+        Returns:
+            tuple(str, int, int): A tuple with the completed text, the number of tokens in the prompt and the number of tokens in the response
+        """
+        prompt = self._format_prompt(prompt)
+
+        # Check if there is a system prompt
+        if "system_prompt" in kwargs:
+            system_prompt = self._format_prompt(kwargs["system_prompt"], role="system")
+            prompt = system_prompt + prompt
+            del kwargs["system_prompt"]
+
+        response = self.client.chat.completions.create(model=self.deployment_name, messages=prompt, **kwargs)
+        completion = response.choices[0].message.content
+        prompt_tokens = response.usage.prompt_tokens
+        response_tokens = response.usage.completion_tokens
+
+        return completion, prompt_tokens, response_tokens
+
+    def _completion(self, prompt: str, **kwargs) -> tuple[str, int, int]:
+        """Wrapper for the completion api with retry and exponential backoff
+
+        Args:
+            prompt (str): Prompt for the completion
+
+        Returns:
+            tuple(str, int, int): A tuple with the completed text, the number of tokens in the prompt and the number of tokens in the response
+        """
+        wrapper = BaseLLM.retry_with_exponential_backoff(self.__completion, self.logger, errors=(
+        openai.RateLimitError, openai.APIConnectionError, openai.InternalServerError))
+        return wrapper(prompt, **kwargs)
+
+    def _calculate_tokens(self, prompt: str) -> int:
+        """Calculate the number of tokens in the prompt
+        Args:
+            prompt (str): Prompt
+        Returns:
+            int: Number of tokens in the prompt
+        """
+        num_tokens = 0
+        num_tokens += 4  # every message follows <im_start>{role/name}\n{content}<im_end>\n
+        num_tokens += len(self.encoding.encode(prompt))
+        num_tokens += 2  # every reply is primed with <im_start>assistant
+        return num_tokens
+
+class Llama8b(BaseLLM):
+    """Class for the GLM-4 model from OpenAI with 8.000 tokens of context"""
+
+    def __init__(self):
+        """Constructor for the GLM4 class
+        Args:
+            prompt_token_cost (float): Cost of a token in the prompt
+            response_token_cost (float): Cost of a token in the response
+        """
+        super().__init__(0.01 / 1000, 0.03 / 1000, 128000, 0.7)
+
+        self.logger.info("Loading GLM-4 model from the OPENAI API...")
+        # Load the model
+        self.client = OpenAI(api_key="ollama", base_url="http://localhost:11434/v1")
+        self.deployment_name = "llama3"
+        self.logger.info("Deployment name: " + self.deployment_name)
+        # Encoding to estimate the number of tokens
+        self.encoding = tiktoken.encoding_for_model("gpt-4-turbo-preview")
+
+        self.logger.info("llama3 model loaded")
 
     def _format_prompt(self, prompt: str, role: str = 'user') -> list[dict[str, str]]:
         """Format the prompt to be used by the GPT-4 model

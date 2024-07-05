@@ -1,0 +1,258 @@
+None - step_0 - INFO - __main__ - train_llm_agent:47 - Program started
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Jack is player 0
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Lily is player 1
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Juan is player 2
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Emily is player 3
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Laura is player 4
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Tom is player 5
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Pedro is player 6
+None - step_0 - INFO - chromadb.telemetry.product.posthog - __init__:20 - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: name. Memory: Jack
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Jack is player 0
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Lily is player 1
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Juan is player 2
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Emily is player 3
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Laura is player 4
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Tom is player 5
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Pedro is player 6
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: current_steps_sequence. Memory: <queue.Queue object at 0x75b889064090>
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: valid_actions. Memory: ['grab apple (x,y)', 'attack player (player_name) at (x,y)', 'explore', 'clean dirt of river at (x,y)', 'go to river bank at (x,y)', 'go to apples field edge at (x,y)']
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: bio_str. Memory: Jack's bio: Juan is a cooperative person. 
+Important: make all your decisions taking into account Jack's bio.
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: previous_actions. Memory: You have not performed any actions yet.
+None - step_0 - INFO - chromadb.telemetry.product.posthog - __init__:20 - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: name. Memory: Lily
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Jack is player 0
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Lily is player 1
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Juan is player 2
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Emily is player 3
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Laura is player 4
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Tom is player 5
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Pedro is player 6
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: current_steps_sequence. Memory: <queue.Queue object at 0x75b889070210>
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: valid_actions. Memory: ['grab apple (x,y)', 'attack player (player_name) at (x,y)', 'explore', 'clean dirt of river at (x,y)', 'go to river bank at (x,y)', 'go to apples field edge at (x,y)']
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: bio_str. Memory: Lily's bio: Juan is a cooperative person. 
+Important: make all your decisions taking into account Lily's bio.
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: previous_actions. Memory: You have not performed any actions yet.
+None - step_0 - INFO - chromadb.telemetry.product.posthog - __init__:20 - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: name. Memory: Juan
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Jack is player 0
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Lily is player 1
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Juan is player 2
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Emily is player 3
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Laura is player 4
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Tom is player 5
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Pedro is player 6
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: current_steps_sequence. Memory: <queue.Queue object at 0x75b889072c90>
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: valid_actions. Memory: ['grab apple (x,y)', 'attack player (player_name) at (x,y)', 'explore', 'clean dirt of river at (x,y)', 'go to river bank at (x,y)', 'go to apples field edge at (x,y)']
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: bio_str. Memory: Juan's bio: Juan is a cooperative person. 
+Important: make all your decisions taking into account Juan's bio.
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: previous_actions. Memory: You have not performed any actions yet.
+None - step_0 - INFO - chromadb.telemetry.product.posthog - __init__:20 - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: name. Memory: Emily
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Jack is player 0
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Lily is player 1
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Juan is player 2
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Emily is player 3
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Laura is player 4
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Tom is player 5
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Pedro is player 6
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: current_steps_sequence. Memory: <queue.Queue object at 0x75b88907ddd0>
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: valid_actions. Memory: ['grab apple (x,y)', 'attack player (player_name) at (x,y)', 'explore', 'clean dirt of river at (x,y)', 'go to river bank at (x,y)', 'go to apples field edge at (x,y)']
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: bio_str. Memory: Emily's bio: Juan is a cooperative person. 
+Important: make all your decisions taking into account Emily's bio.
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: previous_actions. Memory: You have not performed any actions yet.
+None - step_0 - INFO - chromadb.telemetry.product.posthog - __init__:20 - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: name. Memory: Laura
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Jack is player 0
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Lily is player 1
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Juan is player 2
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Emily is player 3
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Laura is player 4
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Tom is player 5
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Pedro is player 6
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: current_steps_sequence. Memory: <queue.Queue object at 0x75b889080f50>
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: valid_actions. Memory: ['grab apple (x,y)', 'attack player (player_name) at (x,y)', 'explore', 'clean dirt of river at (x,y)', 'go to river bank at (x,y)', 'go to apples field edge at (x,y)']
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: bio_str. Memory: Laura's bio: Laura is a cooperative person.  
+Important: make all your decisions taking into account Laura's bio.
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: previous_actions. Memory: You have not performed any actions yet.
+None - step_0 - INFO - chromadb.telemetry.product.posthog - __init__:20 - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: name. Memory: Tom
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Jack is player 0
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Lily is player 1
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Juan is player 2
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Emily is player 3
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Laura is player 4
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Tom is player 5
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Pedro is player 6
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: current_steps_sequence. Memory: <queue.Queue object at 0x75b88909c0d0>
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: valid_actions. Memory: ['grab apple (x,y)', 'attack player (player_name) at (x,y)', 'explore', 'clean dirt of river at (x,y)', 'go to river bank at (x,y)', 'go to apples field edge at (x,y)']
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: bio_str. Memory: Tom's bio: Juan is a cooperative person. 
+Important: make all your decisions taking into account Tom's bio.
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: previous_actions. Memory: You have not performed any actions yet.
+None - step_0 - INFO - chromadb.telemetry.product.posthog - __init__:20 - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: name. Memory: Pedro
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Jack is player 0
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Lily is player 1
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Juan is player 2
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Emily is player 3
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Laura is player 4
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Tom is player 5
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Pedro is player 6
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: current_steps_sequence. Memory: <queue.Queue object at 0x75b88909df10>
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: valid_actions. Memory: ['grab apple (x,y)', 'attack player (player_name) at (x,y)', 'explore', 'clean dirt of river at (x,y)', 'go to river bank at (x,y)', 'go to apples field edge at (x,y)']
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: bio_str. Memory: Pedro's bio: Pedro is a cooperative person. 
+Important: make all your decisions taking into account Pedro's bio.
+None - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: previous_actions. Memory: You have not performed any actions yet.
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - describe_scene:113 - Avatar 0 is in position (9, 14)
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - describe_scene:113 - Avatar 1 is in position (10, 26)
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - describe_scene:113 - Avatar 2 is in position (9, 18)
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - describe_scene:113 - Avatar 3 is in position (12, 18)
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - describe_scene:113 - Avatar 4 is in position (11, 16)
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - describe_scene:113 - Avatar 5 is in position (8, 12)
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - describe_scene:113 - Avatar 6 is in position (8, 16)
+None - step_0 - INFO - backoff - _log_backoff:105 - Backing off send_request(...) for 0.1s (requests.exceptions.SSLError: HTTPSConnectionPool(host='us-api.i.posthog.com', port=443): Max retries exceeded with url: /batch/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: EE certificate key too weak (_ssl.c:1002)'))))
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.observations_generator - get_all_observations_descriptions:104 -  Observations descriptions for all agents: {'Jack': ['Observed dirt on the river at position [5, 5]', 'Observed dirt on the river at position [5, 6]', 'Observed dirt on the river at position [4, 6]', 'Observed dirt on the river at position [5, 7]', 'Observed dirt on the river at position [4, 7]', 'Observed dirt on the river at position [5, 9]', 'Observed dirt on the river at position [4, 9]', 'Observed dirt on the river at position [5, 11]', 'Observed dirt on the river at position [4, 11]', 'Observed dirt on the river at position [5, 13]', 'Observed dirt on the river at position [4, 13]', 'Observed dirt on the river at position [5, 15]', 'Observed dirt on the river at position [4, 15]', 'Observed agent Tom at position [8, 12].'], 'Lily': ['Observed dirt on the river at position [5, 28]', 'Observed dirt on the river at position [5, 26]', 'Observed dirt on the river at position [5, 25]'], 'Juan': ['Observed agent Emily at position [12, 18].', 'Observed agent Laura at position [11, 16].', 'Observed agent Jack at position [9, 14].', 'Observed agent Pedro at position [8, 16].'], 'Emily': ['Observed agent Tom at position [8, 12].', 'Observed agent Jack at position [9, 14].', 'Observed agent Laura at position [11, 16].', 'Observed agent Pedro at position [8, 16].', 'Observed agent Juan at position [9, 18].'], 'Laura': ['Observed dirt on the river at position [6, 17]', 'Observed agent Juan at position [9, 18].', 'Observed agent Emily at position [12, 18].', 'Observed agent Pedro at position [8, 16].'], 'Tom': ['Observed agent Laura at position [11, 16].', 'Observed agent Jack at position [9, 14].', 'Observed agent Pedro at position [8, 16].'], 'Pedro': ['Observed dirt on the river at position [1, 11]', 'Observed dirt on the river at position [1, 13]', 'Observed dirt on the river at position [1, 15]', 'Observed dirt on the river at position [1, 17]', 'Observed dirt on the river at position [1, 19]', 'Observed dirt on the river at position [2, 11]', 'Observed dirt on the river at position [2, 13]', 'Observed dirt on the river at position [2, 15]', 'Observed dirt on the river at position [2, 17]', 'Observed dirt on the river at position [2, 19]', 'Observed dirt on the river at position [3, 11]', 'Observed dirt on the river at position [3, 13]', 'Observed dirt on the river at position [3, 15]', 'Observed dirt on the river at position [3, 17]', 'Observed dirt on the river at position [3, 19]', 'Observed dirt on the river at position [4, 11]', 'Observed dirt on the river at position [4, 13]', 'Observed dirt on the river at position [4, 15]', 'Observed dirt on the river at position [4, 17]', 'Observed dirt on the river at position [4, 19]', 'Observed dirt on the river at position [5, 11]', 'Observed dirt on the river at position [5, 13]', 'Observed dirt on the river at position [5, 15]', 'Observed dirt on the river at position [5, 17]', 'Observed dirt on the river at position [5, 19]', 'Observed dirt on the river at position [6, 17]', 'Observed agent Tom at position [8, 12].', 'Observed agent Jack at position [9, 14].', 'Observed agent Juan at position [9, 18].']} 
+
+2024-07-02 13:00:00 - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: game_time. Memory: 2024-07-02 13:00:00
+2024-07-02 13:00:00 - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: known_agents. Memory: {'Tom'}
+None - step_0 - INFO - AgentLLM.agent.memory_structure.long_term_memory - add_memory:91 - Adding memory to long term memory, Metadata: {'type': 'perception', 'created_at': '2024-07-02 13:00:00', 'poignancy': 10, 'timestamp': 1719896400}. Memory: Now it's 2024-07-02 13:00:00 and the reward obtained by me is 0.0. I am at the position (9, 14) looking to the West.
+I can currently observe the following:
+Observed agent Tom at position [8, 12].
+Observed dirt on the river at position [5, 13]
+Observed dirt on the river at position [5, 15]
+Observed dirt on the river at position [4, 13]
+Observed dirt on the river at position [4, 15]
+Observed dirt on the river at position [5, 11]
+Observed dirt on the river at position [4, 11]
+Observed dirt on the river at position [5, 9]
+Observed dirt on the river at position [4, 9]
+Observed dirt on the river at position [5, 7]
+None - step_0 - INFO - backoff - _log_backoff:105 - Backing off send_request(...) for 1.5s (requests.exceptions.SSLError: HTTPSConnectionPool(host='us-api.i.posthog.com', port=443): Max retries exceeded with url: /batch/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: EE certificate key too weak (_ssl.c:1002)'))))
+2024-07-02 13:00:00 - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: current_observation. Memory: Observed agent Tom at position [8, 12].
+Observed dirt on the river at position [5, 13]
+Observed dirt on the river at position [5, 15]
+Observed dirt on the river at position [4, 13]
+Observed dirt on the river at position [4, 15]
+Observed dirt on the river at position [5, 11]
+Observed dirt on the river at position [4, 11]
+Observed dirt on the river at position [5, 9]
+Observed dirt on the river at position [4, 9]
+Observed dirt on the river at position [5, 7]
+2024-07-02 13:00:00 - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: changes_in_state. Memory: []
+2024-07-02 13:00:00 - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: current_reward. Memory: 0.0
+2024-07-02 13:00:00 - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: last_reward. Memory: 0.0
+2024-07-02 13:00:00 - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: current_position. Memory: (9, 14)
+2024-07-02 13:00:00 - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: last_position. Memory: (9, 14)
+2024-07-02 13:00:00 - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: current_orientation. Memory: West
+2024-07-02 13:00:00 - step_0 - INFO - AgentLLM.agent.memory_structure.short_term_memory - add_memory:35 - Adding memory to short term memory, Key: reason_to_react. Memory: There is no plan to follow.
+None - step_0 - INFO - AgentLLM.agent.agent - perceive:180 - Jack should react to the observation: True
+None - step_0 - INFO - AgentLLM.agent.llm - __init__:287 - Loading GLM-4 model from the OPENAI API...
+None - step_0 - INFO - AgentLLM.agent.llm - __init__:291 - Deployment name: glm-4
+2024-07-02 13:00:00 - step_0 - ERROR - __main__ - train_llm_agent:96 - Rounds executed: 0. Exception: HTTPSConnectionPool(host='openaipublic.blob.core.windows.net', port=443): Max retries exceeded with url: /encodings/cl100k_base.tiktoken (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: EE certificate key too weak (_ssl.c:1002)')))
+Traceback (most recent call last):
+  File "/home/cmdout/LLMRL/meltingpot/venv/lib/python3.11/site-packages/urllib3/connectionpool.py", line 467, in _make_request
+    self._validate_conn(conn)
+  File "/home/cmdout/LLMRL/meltingpot/venv/lib/python3.11/site-packages/urllib3/connectionpool.py", line 1099, in _validate_conn
+    conn.connect()
+  File "/home/cmdout/LLMRL/meltingpot/venv/lib/python3.11/site-packages/urllib3/connection.py", line 653, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/cmdout/LLMRL/meltingpot/venv/lib/python3.11/site-packages/urllib3/connection.py", line 806, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+               ^^^^^^^^^^^^^^^^
+  File "/home/cmdout/LLMRL/meltingpot/venv/lib/python3.11/site-packages/urllib3/util/ssl_.py", line 465, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/cmdout/LLMRL/meltingpot/venv/lib/python3.11/site-packages/urllib3/util/ssl_.py", line 509, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/cmdout/anaconda3/lib/python3.11/ssl.py", line 517, in wrap_socket
+    return self.sslsocket_class._create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/cmdout/anaconda3/lib/python3.11/ssl.py", line 1075, in _create
+    self.do_handshake()
+  File "/home/cmdout/anaconda3/lib/python3.11/ssl.py", line 1346, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: EE certificate key too weak (_ssl.c:1002)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cmdout/LLMRL/meltingpot/venv/lib/python3.11/site-packages/urllib3/connectionpool.py", line 793, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/home/cmdout/LLMRL/meltingpot/venv/lib/python3.11/site-packages/urllib3/connectionpool.py", line 491, in _make_request
+    raise new_e
+urllib3.exceptions.SSLError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: EE certificate key too weak (_ssl.c:1002)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/cmdout/LLMRL/meltingpot/venv/lib/python3.11/site-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/home/cmdout/LLMRL/meltingpot/venv/lib/python3.11/site-packages/urllib3/connectionpool.py", line 847, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/home/cmdout/LLMRL/meltingpot/venv/lib/python3.11/site-packages/urllib3/util/retry.py", line 515, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='openaipublic.blob.core.windows.net', port=443): Max retries exceeded with url: /encodings/cl100k_base.tiktoken (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: EE certificate key too weak (_ssl.c:1002)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cmdout/LLMRL/MeltingpotLLM/AgentLLM/train_llm.py", line 92, in train_llm_agent
+    train_loop(agents, args.substrate, args.persist_memories, env)
+  File "/home/cmdout/LLMRL/MeltingpotLLM/AgentLLM/train_llm.py", line 118, in train_loop
+    step_actions = agent.move(observations, scene_description, state_changes, game_time, agent_reward, env.curr_global_map)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/cmdout/LLMRL/MeltingpotLLM/AgentLLM/agent/agent.py", line 102, in move
+    self.understand(filtered_observations, state_changes)
+  File "/home/cmdout/LLMRL/MeltingpotLLM/AgentLLM/agent/agent.py", line 360, in understand
+    update_understanding_4(observations, self, self.stm.get_memory('game_time'), last_reward, current_reward,
+  File "/home/cmdout/LLMRL/MeltingpotLLM/AgentLLM/agent/cooperative_modules/understanding.py", line 240, in update_understanding_4
+    llm = LLMModels().get_main_model()
+          ^^^^^^^^^^^
+  File "/home/cmdout/LLMRL/MeltingpotLLM/AgentLLM/agent/llm.py", line 209, in __new__
+    "glm-4": GLM4(),
+             ^^^^^^
+  File "/home/cmdout/LLMRL/MeltingpotLLM/AgentLLM/agent/llm.py", line 293, in __init__
+    self.encoding = tiktoken.encoding_for_model("gpt-4-turbo-preview")
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/cmdout/LLMRL/meltingpot/venv/lib/python3.11/site-packages/tiktoken/model.py", line 103, in encoding_for_model
+    return get_encoding(encoding_name_for_model(model_name))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/cmdout/LLMRL/meltingpot/venv/lib/python3.11/site-packages/tiktoken/registry.py", line 73, in get_encoding
+    enc = Encoding(**constructor())
+                     ^^^^^^^^^^^^^
+  File "/home/cmdout/LLMRL/meltingpot/venv/lib/python3.11/site-packages/tiktoken_ext/openai_public.py", line 72, in cl100k_base
+    mergeable_ranks = load_tiktoken_bpe(
+                      ^^^^^^^^^^^^^^^^^^
+  File "/home/cmdout/LLMRL/meltingpot/venv/lib/python3.11/site-packages/tiktoken/load.py", line 147, in load_tiktoken_bpe
+    contents = read_file_cached(tiktoken_bpe_file, expected_hash)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/cmdout/LLMRL/meltingpot/venv/lib/python3.11/site-packages/tiktoken/load.py", line 64, in read_file_cached
+    contents = read_file(blobpath)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/home/cmdout/LLMRL/meltingpot/venv/lib/python3.11/site-packages/tiktoken/load.py", line 25, in read_file
+    resp = requests.get(blobpath)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/cmdout/LLMRL/meltingpot/venv/lib/python3.11/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/cmdout/LLMRL/meltingpot/venv/lib/python3.11/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/cmdout/LLMRL/meltingpot/venv/lib/python3.11/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/cmdout/LLMRL/meltingpot/venv/lib/python3.11/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/cmdout/LLMRL/meltingpot/venv/lib/python3.11/site-packages/requests/adapters.py", line 517, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='openaipublic.blob.core.windows.net', port=443): Max retries exceeded with url: /encodings/cl100k_base.tiktoken (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: EE certificate key too weak (_ssl.c:1002)')))
+None - step_0 - INFO - backoff - _log_backoff:105 - Backing off send_request(...) for 0.1s (requests.exceptions.SSLError: HTTPSConnectionPool(host='us-api.i.posthog.com', port=443): Max retries exceeded with url: /batch/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: EE certificate key too weak (_ssl.c:1002)'))))
+None - step_0 - ERROR - backoff - _log_giveup:120 - Giving up send_request(...) after 4 tries (requests.exceptions.SSLError: HTTPSConnectionPool(host='us-api.i.posthog.com', port=443): Max retries exceeded with url: /batch/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: EE certificate key too weak (_ssl.c:1002)'))))

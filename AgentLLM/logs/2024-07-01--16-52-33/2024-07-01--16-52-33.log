@@ -1,0 +1,9 @@
+None - step_0 - INFO - __main__ - train_llm_agent:47 - Program started
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Jack is player 0
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Lily is player 1
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Juan is player 2
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Emily is player 3
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Laura is player 4
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Tom is player 5
+None - step_0 - INFO - AgentLLM.env.scene_descriptor.scene_descriptor - __init__:94 - Pedro is player 6
+None - step_0 - INFO - chromadb.telemetry.product.posthog - __init__:20 - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.

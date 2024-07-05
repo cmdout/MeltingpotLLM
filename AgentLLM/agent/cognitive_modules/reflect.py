@@ -59,18 +59,29 @@ def reflect_insights(name, world_context, memory_statements, questions: list[str
 
     llm = LLMModels().get_main_model()
     prompt_path = os.path.join(prompts_folder, 'reflect_insight.txt')
-
+    flag = True
+    insights = []
     memory_statements = list_statements_to_string(memory_statements, questions)
     try:
-        response = llm.completion(prompt=prompt_path, inputs=[name, world_context, memory_statements, agent_bio])
-        insights_dict = extract_answers(response)
-        insights = [i['Insight'] for i in insights_dict.values()]
-    except ValueError as e:
-        if str(e) == 'Prompt is too long':
-            llm = LLMModels().get_longer_context_fallback()
+        while flag:
             response = llm.completion(prompt=prompt_path, inputs=[name, world_context, memory_statements, agent_bio])
             insights_dict = extract_answers(response)
-            insights = [i['Insight'] for i in insights_dict.values()]
+            for i in insights_dict.values():
+                if not isinstance(i,dict):
+                    break
+                if 'Insight' in i.keys():
+                    insights.append(i['Insight'])
+                    flag = False
+                else:
+                    flag = True
+                    break
+    except ValueError as e:
+        if str(e) == 'Prompt is too long':
+            insights = []
+            # llm = LLMModels().get_longer_context_fallback()
+            # response = llm.completion(prompt=prompt_path, inputs=[name, world_context, memory_statements, agent_bio])
+            # insights_dict = extract_answers(response)
+            # insights = [i['Insight'] for i in insights_dict.values()]
         else:
             raise e
    
